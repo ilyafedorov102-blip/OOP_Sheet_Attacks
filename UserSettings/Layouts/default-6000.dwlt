@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1918
     height: 980
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Project
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 548}
   m_MaxSize: {x: 10000, y: 10000}
@@ -564,7 +564,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 89
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
@@ -638,12 +638,12 @@ MonoBehaviour:
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs:
-    - m_Data: 50762
+    - m_Data: 51684
     m_LastClickedID:
-      m_Data: 50762
+      m_Data: 51684
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 50678
+    - m_Data: 51600
     - m_Data: 1000000000
     - m_Data: 2147483647
     m_RenameOverlay:
@@ -678,7 +678,7 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 50678
+    - m_Data: 51600
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -705,8 +705,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: []
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs:
+    - m_Data: 45524
+    m_LastClickedInstanceID: 45524
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs:
     - m_Data: 0
@@ -1342,9 +1343,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: -1.2045685, y: 0.34558263, z: 1061.944}
+    m_Target: {x: -1.248348, y: 0.4111647, z: 1048.2745}
     speed: 2
-    m_Value: {x: -1.2045685, y: 0.34558263, z: 1061.944}
+    m_Value: {x: -1.248348, y: 0.4111647, z: 1048.2745}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1394,9 +1395,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 7.8397274
+    m_Target: 7.744955
     speed: 2
-    m_Value: 7.8397274
+    m_Value: 7.744955
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1470,16 +1471,16 @@ MonoBehaviour:
     m_DynamicPanelBehavior: 0
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 57}
-      m_SelectedIDs: []
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs:
+      - m_Data: 45524
       m_LastClickedID:
         m_Data: 0
       m_ExpandedIDs:
-      - m_Data: -2674
-      - m_Data: -1356
-      - m_Data: 50130
-      - m_Data: 50168
-      - m_Data: 50224
+      - m_Data: -10392
+      - m_Data: -1422
+      - m_Data: 51262
+      - m_Data: 51300
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
