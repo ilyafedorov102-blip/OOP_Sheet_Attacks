@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1918
     height: 980
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Scene
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 548}
   m_MaxSize: {x: 10000, y: 10000}
@@ -173,7 +173,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 112}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 25
+  controlID: 46
   draggingID: 0
 --- !u!114 &8
 MonoBehaviour:
@@ -564,7 +564,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 89
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
@@ -619,7 +619,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Scenes
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -629,7 +629,7 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\user\Sheet Attacks
   m_LockTracker:
@@ -638,12 +638,12 @@ MonoBehaviour:
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs:
-    - m_Data: 51684
+    - m_Data: 51734
     m_LastClickedID:
-      m_Data: 51684
+      m_Data: 51734
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 51600
+    - m_Data: 51652
     - m_Data: 1000000000
     - m_Data: 2147483647
     m_RenameOverlay:
@@ -678,7 +678,7 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 51600
+    - m_Data: 51652
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -706,8 +706,8 @@ MonoBehaviour:
       m_ResourceFile: 
   m_ListAreaState:
     m_SelectedInstanceIDs:
-    - m_Data: 45524
-    m_LastClickedInstanceID: 45524
+    - m_Data: 70436
+    m_LastClickedInstanceID: 70436
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs:
     - m_Data: 0
@@ -1343,9 +1343,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: -1.248348, y: 0.4111647, z: 1048.2745}
+    m_Target: {x: 0.071754135, y: -0.55936235, z: 0.021683268}
     speed: 2
-    m_Value: {x: -1.248348, y: 0.4111647, z: 1048.2745}
+    m_Value: {x: 0.071754135, y: -0.55936235, z: 0.021683268}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1395,9 +1395,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 7.744955
+    m_Target: 7.8316727
     speed: 2
-    m_Value: 7.744955
+    m_Value: 7.8316727
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1473,14 +1473,28 @@ MonoBehaviour:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs:
-      - m_Data: 45524
+      - m_Data: 70436
       m_LastClickedID:
-        m_Data: 0
+        m_Data: 70436
       m_ExpandedIDs:
-      - m_Data: -10392
-      - m_Data: -1422
-      - m_Data: 51262
-      - m_Data: 51300
+      - m_Data: -31322
+      - m_Data: -31156
+      - m_Data: -28372
+      - m_Data: -2184
+      - m_Data: -1408
+      - m_Data: 51186
+      - m_Data: 51268
+      - m_Data: 51276
+      - m_Data: 51310
+      - m_Data: 51386
+      - m_Data: 51398
+      - m_Data: 51414
+      - m_Data: 51438
+      - m_Data: 69102
+      - m_Data: 69110
+      - m_Data: 69136
+      - m_Data: 70436
+      - m_Data: 70478
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 

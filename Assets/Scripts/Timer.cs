@@ -6,38 +6,43 @@ public class Timer : MonoBehaviour
     public float miliSecond;
     public float second;
     public float minute;
-
+    public GameObject Pause;
     public TMP_Text text;
+
     private void FixedUpdate() // вызывается 50 раз в секунду
     {
-        miliSecond += 0.02f;
-
-        if (miliSecond >= 1)
+        if (Pause.activeSelf == false)
         {
-            second++;
-            miliSecond = 0;
-        }
+            miliSecond += 0.02f;
 
-        if (second >= 60)
-        {
-            minute++;
-            second = 0;
-        }
+            if (miliSecond >= 1)
+            {
+                second++;
+                miliSecond = 0;
+            }
 
-        if (minute < 10)
-        {
-            if (second < 10)
-                text.text = $"0{minute} : 0{second}";
+            if (second >= 60)
+            {
+                minute++;
+                second = 0;
+            }
+
+            if (minute < 10)
+            {
+                if (second < 10)
+                    text.text = $"0{minute} : 0{second}";
+                else
+                    text.text = $"0{minute} : {second}";
+            }
             else
-                text.text = $"0{minute} : {second}";
+            {
+                if (second < 10)
+                    text.text = $"{minute} : 0{second}";
+                else
+                    text.text = $"{minute} : {second}";
+            }
         }
-        else
-        {
-            if (second < 10)
-                text.text = $"{minute} : 0{second}";
-            else
-                text.text = $"{minute} : {second}";
-        }
+        
 
     }
 }

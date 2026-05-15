@@ -2,11 +2,10 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
+public class MenuManager : MonoBehaviour
 {
 
     public GameObject Pause;
-    protected bool isPause;
 
     public GameObject BuildingsRoadAndTerritory;
     public GameObject BuildingsAttacks;
@@ -17,11 +16,7 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        isPause = false;
-        BuildingsRoadAndTerritory.SetActive(false);
-        BuildingsAttacks.SetActive(false);
-        BuildingsDefence.SetActive(false);
-        BuildingsOthers.SetActive(false);
+        
     }
 
     // Update is called once per frame
@@ -29,8 +24,7 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            isPause = !isPause;
-            Pause.SetActive(isPause);
+            ChangePause();
         }
     }
 
@@ -52,8 +46,10 @@ public class GameManager : MonoBehaviour
 
     public void ChangePause()
     {
-        isPause = !isPause;
-        Pause.SetActive(isPause);
+        if (Pause.activeSelf == true)
+            Pause.SetActive(false);
+        else
+            Pause.SetActive(true);
     }
 
     public void ChangePanelBuildingsRoadAndTerritory()
