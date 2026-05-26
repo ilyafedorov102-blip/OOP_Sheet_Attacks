@@ -4,10 +4,12 @@ using TMPro;
 public class Timer : MonoBehaviour
 {
     public float miliSecond;
-    public float second;
-    public float minute;
+    public int second;
+    public int minute;
     public GameObject Pause;
     public TMP_Text text;
+
+    public int Second { get => second; set => second = value; }
 
     private void FixedUpdate() // вызывается 50 раз в секунду
     {
@@ -17,32 +19,30 @@ public class Timer : MonoBehaviour
 
             if (miliSecond >= 1)
             {
-                second++;
+                Second++;
                 miliSecond = 0;
             }
 
-            if (second >= 60)
+            if (Second >= 60)
             {
                 minute++;
-                second = 0;
+                Second = 0;
             }
 
             if (minute < 10)
             {
-                if (second < 10)
-                    text.text = $"0{minute} : 0{second}";
+                if (Second < 10)
+                    text.text = $"0{minute} : 0{Second}";
                 else
-                    text.text = $"0{minute} : {second}";
+                    text.text = $"0{minute} : {Second}";
             }
             else
             {
-                if (second < 10)
-                    text.text = $"{minute} : 0{second}";
+                if (Second < 10)
+                    text.text = $"{minute} : 0{Second}";
                 else
-                    text.text = $"{minute} : {second}";
+                    text.text = $"{minute} : {Second}";
             }
         }
-        
-
     }
 }

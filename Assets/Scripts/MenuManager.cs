@@ -6,7 +6,6 @@ public class MenuManager : MonoBehaviour
 {
 
     public GameObject Pause;
-
     public GameObject BuildingsRoadAndTerritory;
     public GameObject BuildingsAttacks;
     public GameObject BuildingsDefence;
