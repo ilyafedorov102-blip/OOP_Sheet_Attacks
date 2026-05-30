@@ -6,12 +6,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject objectPrefab; // Префаб объекта для создания
     [SerializeField] private GameObject Panel;
 
-    [SerializeField] private GameObject Sp_gold;
-    [SerializeField] private GameObject Sp_iron;
-    [SerializeField] private GameObject Sp_oil;
-    [SerializeField] private GameObject Sp_Titanium;
-    [SerializeField] private GameObject Sp_materials;
-
     [SerializeField] private Button btnSetObj;
     [SerializeField] private float cellSize;
     [SerializeField] private float zoomSpeed = 5f;
@@ -33,11 +27,6 @@ public class GameManager : MonoBehaviour
     {
         // Подписываемся на событие нажатия кнопки
         btnSetObj.onClick.AddListener(CreateObject);
-        Spawn_res(Sp_iron, Random.Range(4, 6), minBorder, maxBorder);
-        Spawn_res(Sp_gold, Random.Range(4, 6), minBorder, maxBorder);
-        Spawn_res(Sp_oil, Random.Range(4, 6), minBorder, maxBorder);
-        Spawn_res(Sp_Titanium, Random.Range(4, 6), minBorder, maxBorder);
-        Spawn_res(Sp_materials, Random.Range(4, 6), minBorder, maxBorder);
     }
 
     void Update()
@@ -60,7 +49,7 @@ public class GameManager : MonoBehaviour
             LimitCameraPosition();
         }
 
-        // Перетаскивание объекта при спавне
+        // Перетаскивание объекта при создании
         if (isDragging)
         {
             if (Input.GetMouseButtonDown(0))
@@ -86,19 +75,6 @@ public class GameManager : MonoBehaviour
 
             // Проверяем границы и меняем цвет
             UpdateObjectColor();
-        }
-    }
-    void Spawn_res(GameObject Obj, int amount, Vector2 Min_crd, Vector2 Max_crd)
-    {
-        Vector2 Pos;
-        while (amount > 0)
-        {
-            Pos.x = amount % 2 == 0 ? Random.Range(0, Max_crd.x) : Random.Range(Min_crd.x, 0);
-            Pos.y = Random.Range(Min_crd.y, Max_crd.y);
-            Pos.x = Mathf.Round(Pos.x / 2 / cellSize) * cellSize * 2;
-            Pos.y = Mathf.Round(Pos.y / 2 / cellSize) * cellSize * 2;
-            Instantiate(Obj, Pos, Quaternion.identity);
-            amount--;
         }
     }
     void CreateObject()
@@ -130,7 +106,7 @@ public class GameManager : MonoBehaviour
     {
         if (currentObject != null && SR != null)
         {
-            if (!Obj_in_Borders(currentObject))
+            if ((!Obj_in_Borders(currentObject)))
             {
                 SR.color = RedCol;
             }
@@ -140,7 +116,6 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-
     void LimitCameraPosition()
     {
         Camera cam = Camera.main;

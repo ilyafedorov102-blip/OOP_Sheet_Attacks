@@ -6,14 +6,29 @@ public class ResourcesManager : MonoBehaviour
 {
     ResourcesData pl1 = new ResourcesData();
     ResourcesData pl2 = new ResourcesData();
-    public TMP_Text textResources_Pl1;
-    public TMP_Text textResources_Pl2;
-    public Timer timer;
     internal int resFlow = 0;
+    [Header("Timer & Resurces fields")]
+    [SerializeField] private TMP_Text textResources_Pl1;
+    [SerializeField] private TMP_Text textResources_Pl2;
+    [SerializeField] private Timer timer;
+    [Header("Resources prefabs")]
+    [SerializeField] private GameObject Sp_gold;
+    [SerializeField] private GameObject Sp_iron;
+    [SerializeField] private GameObject Sp_oil;
+    [SerializeField] private GameObject Sp_Titanium;
+    [SerializeField] private GameObject Sp_materials;
+    [Header("Objects' cell & borders")]
+    [SerializeField] private float cellSize;
+    [SerializeField] private Vector2 minResBorder;
+    [SerializeField] private Vector2 maxResBorder;
 
     void Start()
     {
-        
+        Spawn_res(Sp_iron, Random.Range(4, 6), minResBorder, maxResBorder);
+        Spawn_res(Sp_gold, Random.Range(4, 6), minResBorder, maxResBorder);
+        Spawn_res(Sp_oil, Random.Range(4, 6), minResBorder, maxResBorder);
+        Spawn_res(Sp_Titanium, Random.Range(4, 6), minResBorder, maxResBorder);
+        Spawn_res(Sp_materials, Random.Range(4, 6), minResBorder, maxResBorder);
     }
 
     void Update()
@@ -38,21 +53,33 @@ public class ResourcesManager : MonoBehaviour
             resFlow = timer.minute;
         }
     }
+    void Spawn_res(GameObject Obj, int amount, Vector2 Min_crd, Vector2 Max_crd)
+    {
+        Vector2 Pos;
+        while (amount > 0)
+        {
+            Pos.x = amount % 2 == 0 ? Random.Range(0, Max_crd.x) : Random.Range(Min_crd.x, 0);
+            Pos.y = Random.Range(Min_crd.y, Max_crd.y);
+            Pos.x = Mathf.Round(Pos.x / 2 / cellSize) * cellSize * 2;
+            Pos.y = Mathf.Round(Pos.y / 2 / cellSize) * cellSize * 2;
+            Instantiate(Obj, Pos, Quaternion.identity);
+            amount--;
+        }
+    }
 }
-
-public class ResourcesData
+internal class ResourcesData
 {
-    public int iron;
-    public int gold;
-    public int titanium;
-    public int oil;
-    public int buildMaterials;
-    public int electricity;
-    public int money;
+    internal int iron;
+    internal int gold;
+    internal int titanium;
+    internal int oil;
+    internal int buildMaterials;
+    internal int electricity;
+    internal int money;
 
-    public int ironMiner = 1;
-    public int goldMiner = 1;
-    public int titaniumMiner = 1;
-    public int oilMiner = 1;
-    public int buildMaterialsMiner = 1;
+    internal int ironMiner = 1;
+    internal int goldMiner = 1;
+    internal int titaniumMiner = 1;
+    internal int oilMiner = 1;
+    internal int buildMaterialsMiner = 1;
 }
