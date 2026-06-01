@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1617994028284296655}
   - component: {fileID: 7880140109333870632}
+  - component: {fileID: 7343303704966673705}
   m_Layer: 0
   m_Name: Square 1
   m_TagString: Untagged
@@ -91,3 +92,27 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &7343303704966673705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4847242665058551894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c8b8eedebbbd5b4c96de7c0046e9893, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ResourceBuilding
+  buildingName: 
+  ironCost: 0
+  goldCost: 0
+  titaniumCost: 0
+  oilCost: 0
+  materialsCost: 0
+  electricityCost: 0
+  isTurn: 0
+  gridPosition: {x: 0, y: 0}
+  timer: {fileID: 0}
+  obj: {fileID: 0}
+  typeResourse: iron

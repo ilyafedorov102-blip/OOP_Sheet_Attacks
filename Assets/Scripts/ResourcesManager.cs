@@ -67,7 +67,7 @@ public class ResourcesManager : MonoBehaviour
         }
     }
 }
-internal class ResourcesData
+public class ResourcesData
 {
     internal int iron;
     internal int gold;
